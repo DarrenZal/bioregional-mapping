@@ -32,7 +32,7 @@ Four structural questions required ratification at repo creation:
 1. **Repo name + namespace** — the descriptive vs short-form tradeoff
 2. **Upstream relationship** — bioregional-coordination as nearest peer; Spore as transitively-upstream root
 3. **Initial canon structure** — minimal-skeleton + grow organically (mirroring bioregional-coordination)
-4. **Cross-project learning-field registration** — wire as project_id `bm` from day 1 (mirroring spore / bioregional-coordination / ic / fc / pm)
+4. **Cross-project learning-field registration** — wire as project_id `bioregional-mapping` from day 1 (mirroring bioregional-coordination's full-namespace registration on regen-prod)
 
 This ADR records the operator-ratified resolutions and the load-bearing rationale.
 
@@ -42,7 +42,9 @@ This ADR records the operator-ratified resolutions and the load-bearing rational
 
 Repository directory: `~/projects/bioregional-mapping/`. GitHub: `DarrenZal/bioregional-mapping`. doc_id namespace: `bioregional-mapping.<slug>` (matches the verbose repo name; deliberate alignment of repo-name + namespace as parallel canonical-citation surfaces; parallels `bioregional-coordination.<slug>`).
 
-Cross-project learning-field project_id: `bm` (two-letter shortname, parallel to `ic`, `fc`, `pm`). Bridge-note filenames use `bm.connection.<slug>.md` so source-document prefix matches PROJECTS-registry project_id.
+Cross-project learning-field project_id: `bioregional-mapping` (full namespace as the PROJECTS-dict key, mirroring `bioregional-coordination`'s registration on regen-prod). Bridge-note filenames use slug-only form (`<slug>.md`, mirroring bioregional-coordination); doc_id form is `bioregional-mapping.connection.<slug>` (the parser reads `source_document` from doc_id, not filename).
+
+**Convention discovery note (2026-05-04):** the agent-research surface that informed initial planning suggested a two-letter `bm` shortname plus `bm.connection.<slug>.md` filename pattern; on inspection the regen-prod tip showed `bioregional-coordination` registered with full-namespace key + slug-only filenames. The full-namespace + slug-only convention won out as the actual current pattern, with the older two-letter convention still extant for spore/ic/fc/pm.
 
 GitHub home is the personal account `DarrenZal/` (mirroring `DarrenZal/spore` and `DarrenZal/bioregional-coordination`). Canon repos live in personal account by convention; instance repos use org accounts (`BioregionalKnowledgeCommons/bioregional-commons-web`, `BioregionalKnowledgeCommons/roadmap`).
 
@@ -86,7 +88,7 @@ Initial structure (2026-05-04):
     │       ├── README.md
     │       ├── frozen-vocabulary.yaml      # Spore intake protocol §2a
     │       ├── r-claim-allowlist.yaml      # Spore intake protocol §2b
-    │       └── bm.connection.rc-phase-2-program-guide.md  # day-1 seed bridge note
+    │       └── rc-phase-2-program-guide.md  # day-1 seed bridge note (doc_id: bioregional-mapping.connection.rc-phase-2-program-guide)
     └── workshops/
         └── README.md         # placeholder; zero packets at minimal skeleton
 ```
@@ -99,9 +101,9 @@ Initial structure (2026-05-04):
 
 ### (5) Cross-project learning-field registration
 
-Wire as project_id `bm` in `~/projects/RegenAI/koi-processor/scripts/project_bridge_notes.py` PROJECTS dict from day 1, with `bridge_dir` pointing to this repo's `docs/research/connections/`. The `convergence_export.py` script automatically picks up `source_document LIKE 'bm.%%'` claims into field-family rollups.
+Wire as project_id `bioregional-mapping` in `~/projects/RegenAI/koi-processor/scripts/project_bridge_notes.py` PROJECTS dict from day 1, with `bridge_dir` pointing to this repo's `docs/research/connections/`. The `convergence_export.py` script automatically picks up `source_document LIKE 'bioregional-mapping.%%'` claims into field-family rollups.
 
-Day-1 seed bridge note: `bm.connection.rc-phase-2-program-guide.md` — extracts source claims from RC Phase 2 Program Guide (local snapshot at `~/projects/SalishOakSeeds/docs/rc-phase-2-program-guide.md`).
+Day-1 seed bridge note: `docs/research/connections/rc-phase-2-program-guide.md` (doc_id: `bioregional-mapping.connection.rc-phase-2-program-guide`) — extracts source claims from RC Phase 2 Program Guide (local snapshot at `~/projects/SalishOakSeeds/docs/rc-phase-2-program-guide.md`).
 
 GitHub-sensor RAG ingest path is **deferred**: personal_koi `github_repos` table is not present locally (migration 043 not applied). Cross-project integration via convergence-export pipeline is unaffected.
 

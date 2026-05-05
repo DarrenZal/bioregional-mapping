@@ -31,7 +31,7 @@
 
 doc_ids use `bioregional-mapping.<slug>` (e.g., `bioregional-mapping.project-vision`, `bioregional-mapping.canon-decision.repo-identity-and-bregion-coord-relationship`, `bioregional-mapping.connection.rc-phase-2-program-guide`).
 
-**Project_id in cross-project learning field**: `bm` (two-letter shortname, parallel to `ic`, `fc`, `pm`). Bridge notes use `bm.connection.<slug>` filename convention so source-document prefix matches PROJECTS-registry project_id.
+**Project_id in cross-project learning field**: `bioregional-mapping` (full namespace, mirroring bioregional-coordination's registration on regen-prod). Bridge-note filenames use slug-only form (`<slug>.md`); doc_id form is `bioregional-mapping.connection.<slug>` (matching bioregional-coordination's connection convention; the parser reads `source_document` from the doc_id, not the filename).
 
 ---
 
@@ -80,11 +80,11 @@ Concepts-yaml: NOT yet admitted (per `spore:ADR-0080` precedent followed by IC, 
 
 Bridge notes in `docs/research/connections/` follow the schema documented in [`spore:docs/research/planning/learning-field-intake-protocol-v1.md`](https://github.com/DarrenZal/spore/blob/main/docs/research/planning/learning-field-intake-protocol-v1.md). See also `docs/research/connections/README.md` in this repo for the local digest.
 
-**Filename:** `bm.connection.<slug>.md`
+**Filename:** `<slug>.md` (slug-only; mirrors bioregional-coordination convention)
 
-**Frontmatter**: doc_id, doc_kind: `research`, research_subkind: `bridge_note`, disposition (one of: `clarify | propose-primitive | propose-pattern | hypothesize | resolve-tension | no-change`), concepts (entries from frozen-vocabulary.yaml), sources (with title, url_or_path, accessed), status.
+**Frontmatter**: `doc_id: bioregional-mapping.connection.<slug>`, `doc_kind: connection`, `status`, `disposition` (human form per parser's `DISPOSITION_SLUG`: `clarify existing term | candidate primitive | candidate pattern | implementation hypothesis | unresolved tension | no change`), `concepts` (entries from frozen-vocabulary.yaml), `sources` (with title, url_or_path, accessed), `date`, `author`.
 
-**Body**: source claims `**C1** [confidence: ...] [anchor: §...] Statement.`; review claims `**R1** [target: doc.id] [concept: slug] Statement.` (target MUST be in r-claim-allowlist.yaml).
+**Body**: section heading `## Claim Register` (the parser searches for this exact heading; optionally numbered like `## 1. Claim Register`); source claims `**C1** [confidence: ...] [anchor: §...] Statement.`; review claims under `## Review Claims` heading with format `**R1** [review claim] [target: doc.id] [concept: slug]\\nStatement.\\n*R1 is supported by C1, C2.*` (target MUST be in r-claim-allowlist.yaml).
 
 **Opposition discipline**: ≥2 `no-change` opposition notes per ≥10 total bridge-note intake. Tracked by `convergence_export.py` opposition-rate metric.
 
@@ -92,10 +92,10 @@ Bridge notes in `docs/research/connections/` follow the schema documented in [`s
 
 ## Cross-project learning-field wiring
 
-This repo participates in the cross-project learning field as project_id `bm`. Wiring lives in:
+This repo participates in the cross-project learning field as project_id `bioregional-mapping`. Wiring lives in:
 
-- `~/projects/RegenAI/koi-processor/scripts/project_bridge_notes.py` PROJECTS dict (entry `"bm"`)
-- `~/projects/RegenAI/koi-processor/api/convergence_export.py` (consumes `source_document LIKE 'bm.%%'`)
+- `~/projects/RegenAI/koi-processor/scripts/project_bridge_notes.py` PROJECTS dict (entry `"bioregional-mapping"`)
+- `~/projects/RegenAI/koi-processor/api/convergence_export.py` (consumes `source_document LIKE 'bioregional-mapping.%%'`)
 
 After authoring or amending bridge notes:
 

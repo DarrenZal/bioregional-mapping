@@ -16,7 +16,7 @@ This repo specializes [bioregional-coordination](https://github.com/DarrenZal/bi
 - **Upstream nearest peer**: [bioregional-coordination](https://github.com/DarrenZal/bioregional-coordination) — agentic-bioregionalism canon, of which this repo is the mapping sub-domain specialization (admission triggered per `bioregional-coordination:ADR-0001` §Parking-lot Q5)
 - **Upstream root**: [Spore](https://github.com/DarrenZal/spore) — coordination grammar (cited transitively via bioregional-coordination, directly when needed)
 - **Sibling instance-family members**: [BKC (Bioregional Knowledge Commons)](https://github.com/LinuxIsCool/BioregionKnwoledgeCommons) — operational deployment of the seven-layer stack including mapping pipelines; SalishOakSeeds — Victoria pilot instance applying mapping canon. Cross-citation at peer level.
-- **Cross-project learning-field project_id**: `bm` (registered in `koi-processor/scripts/project_bridge_notes.py` PROJECTS dict; bridge notes use `bm.connection.<slug>` filename convention)
+- **Cross-project learning-field project_id**: `bioregional-mapping` (registered in `koi-processor/scripts/project_bridge_notes.py` PROJECTS dict; bridge notes use slug-only filenames with `doc_id: bioregional-mapping.connection.<slug>`, mirroring bioregional-coordination's convention)
 - **Conceptual frame**: bioregional mapping as multi-layer practice (relational, cultural, ecological, economic, governance, geospatial) — situated within "agentic bioregionalism" (canonized at [`spore.positioning.agentic-bioregionalism`](https://github.com/DarrenZal/spore/blob/main/docs/positioning/agentic-bioregionalism.md))
 
 ## What this repo owns

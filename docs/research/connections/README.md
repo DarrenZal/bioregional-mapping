@@ -10,47 +10,58 @@ Bridge notes serve three purposes (mirroring bioregional-coordination's connecti
 
 ## Current bridge notes
 
-- [`bm.connection.rc-phase-2-program-guide.md`](./bm.connection.rc-phase-2-program-guide.md) — Day-1 seed: claims extracted from RC Phase 2 Program Guide
+- [`rc-phase-2-program-guide.md`](./rc-phase-2-program-guide.md) (doc_id: `bioregional-mapping.connection.rc-phase-2-program-guide`) — Day-1 seed: 10 source claims extracted from RC Phase 2 Program Guide
 
 ## Bridge-note schema (Spore intake protocol §3)
 
 Authoritative reference: [`spore:docs/research/planning/learning-field-intake-protocol-v1.md`](https://github.com/DarrenZal/spore/blob/main/docs/research/planning/learning-field-intake-protocol-v1.md). The local digest below is for quick reference; cite the authoritative source by doc_id.
 
-**Filename:** `bm.connection.<slug>.md`
+**Filename:** `<slug>.md` (slug-only; mirrors bioregional-coordination convention)
 
 **Frontmatter (YAML):**
 
 ```yaml
 ---
 doc_id: bioregional-mapping.connection.<slug>
-doc_kind: research
-research_subkind: bridge_note
-disposition: <clarify | propose-primitive | propose-pattern |
-              hypothesize | resolve-tension | no-change>
+doc_kind: connection
+status: draft                 # draft → review → ratified
+disposition: <human form per parser's DISPOSITION_SLUG dict:
+              clarify existing term | candidate primitive |
+              candidate pattern | implementation hypothesis |
+              unresolved tension | no change>
 concepts: [<concept-slug-1>, <concept-slug-2>, ...]
                               # entries MUST appear in frozen-vocabulary.yaml
 sources:
   - title: <human-readable title>
     url_or_path: <canonical URL or local snapshot path>
     accessed: <YYYY-MM-DD>
-status: draft                 # draft → review → ratified
+date: YYYY-MM-DD
+author: darren-zal
 ---
 ```
 
-**Claim format (in body):**
+**Body section headers** (the parser searches for these exact headings; optional number prefix is allowed e.g. `## 1. Claim Register`):
 
-Source claims — what the external work contributes:
+- `## Claim Register` — required if the note contains C-claims
+- `## Review Claims` — required if the note contains R-claims (also accepted inside `## Claim Register`)
+- `## Open Questions` — optional; questions parsed by `parse_questions`
 
-```
-**C1** [confidence: high|medium|low] [anchor: §<ref>] <Statement.>
-**C2** [confidence: medium] [anchor: §<ref>] <Statement.>
-```
-
-Review claims — proposed canon changes (targets MUST appear in `r-claim-allowlist.yaml`):
+**Source-claim format (under `## Claim Register`):**
 
 ```
-**R1** [target: <doc.id>] [concept: <concept-slug>] <Statement.>
+**C1** [confidence: high|medium|low] [anchor: §<section-ref>]
+<Statement text on next line; can span multiple lines until next bold C\d+.>
 ```
+
+**Review-claim format (under `## Review Claims` or alongside C-claims in `## Claim Register`):**
+
+```
+**R1** [review claim] [target: <doc.id>] [concept: <concept-slug>]
+<Statement text.>
+*R1 is supported by C1, C2.*
+```
+
+R-claim `target:` MUST appear in `r-claim-allowlist.yaml`. The `[review claim]` literal tag is required for the parser. Multiple targets joined with " or " accepted; primary is the first.
 
 **Disposition vocabulary:**
 

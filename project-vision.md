@@ -106,7 +106,7 @@ The substrate this repo composes with comes from bioregional-coordination + Spor
 | [`spore.federation-protocol`](https://github.com/DarrenZal/spore/blob/main/docs/foundations/federation-protocol.md) | Membrane semantics; permeability discipline applied at layer-as-membrane |
 | [`spore.mycelial-holarchy-architecture`](https://github.com/DarrenZal/spore/blob/main/docs/foundations/holonic-network-architecture.md) | Multi-scale holon nesting in mapping workshops |
 | [`spore.maintenance-economics`](https://github.com/DarrenZal/spore/blob/main/docs/foundations/maintenance-economics.md) | Care, provisioning, maintenance, translation labour categories that appear in mapping facilitation work |
-| [`spore.docs.research.planning.learning-field-protocol-v1`](https://github.com/DarrenZal/spore/blob/main/docs/research/planning/learning-field-protocol-v1.md) | Authoritative learning-field protocol; this repo participates as project_id `bm` |
+| [`spore.docs.research.planning.learning-field-protocol-v1`](https://github.com/DarrenZal/spore/blob/main/docs/research/planning/learning-field-protocol-v1.md) | Authoritative learning-field protocol; this repo participates as project_id `bioregional-mapping` |
 | [`spore.docs.research.planning.learning-field-intake-protocol-v1`](https://github.com/DarrenZal/spore/blob/main/docs/research/planning/learning-field-intake-protocol-v1.md) | Authoritative bridge-note intake protocol |
 
 Other upstream primitives, doctrines, modes, properties, derived glossary slugs, patterns, and ADRs are available as substrate; this repo cites them as operational pressure surfaces specific concerns.
@@ -124,14 +124,14 @@ This repo inherits Spore + bioregional-coordination canon-rebuild-arc method dis
 ## Current state (2026-05-04)
 
 - **Phase**: minimal skeleton (created 2026-05-04); zero local foundation docs admitted; ADR-0001 ratifies repo identity
-- **Day-1 seed bridge note**: `bm.connection.rc-phase-2-program-guide` (RC LHC Phase 2 Program Guide; claims extracted)
+- **Day-1 seed bridge note**: `bioregional-mapping.connection.rc-phase-2-program-guide` (RC LHC Phase 2 Program Guide; 10 source claims extracted)
 - **Validator**: not yet implemented (defer until pressure)
 - **Concepts-yaml**: not admitted (per `spore:ADR-0080` precedent followed by IC, PM, bioregional-coordination)
 - **Frozen-vocabulary.yaml**: ~25 entries seeded from RC Phase 2 + Tijn thread + BKC ontology subset (Spore intake protocol §2a)
-- **R-claim-allowlist.yaml**: bm.project-vision and ADR-0001 doc_id as initial targets
+- **R-claim-allowlist.yaml**: `bioregional-mapping.project-vision` and ADR-0001 doc_id as initial targets
 - **Cross-repo citations** all by ADR number / doc_id (not commit SHA)
 - **License**: TBD (parked; ADR-0002 targeted within 4 weeks)
-- **Cross-project learning-field**: registered as project_id `bm` in `koi-processor/scripts/project_bridge_notes.py` PROJECTS dict
+- **Cross-project learning-field**: registered as project_id `bioregional-mapping` in `koi-processor/scripts/project_bridge_notes.py` PROJECTS dict
 - **GitHub-sensor RAG ingest**: deferred (personal_koi `github_repos` table not present locally)
 
 ## Sources + cross-references
