@@ -1,0 +1,20 @@
+# R-claim target allowlist for bioregional-mapping bridge notes.
+# Per Spore intake protocol §2b. R-claims (review claims proposing canon changes)
+# in bridge notes must `target:` a doc_id that appears in this allowlist.
+# Adding new targets requires explicit ratification (typically via the same ADR
+# that creates the target doc, or a small ADR if the target is being made
+# allowlisted post-hoc).
+#
+# date: 2026-05-04
+# protocol: spore.docs.research.planning.learning-field-intake-protocol-v1 §2b
+
+allowed_targets:
+  - doc_id: bioregional-mapping.project-vision
+    file: ../../../project-vision.md
+    rationale: Project vision is the anchor canonical doc; R-claims that propose vision-level edits target this.
+  - doc_id: bioregional-mapping.canon-decision.repo-identity-and-bregion-coord-relationship
+    file: ../canon-decisions/0001-repo-identity-and-bregion-coord-relationship.md
+    rationale: ADR-0001 is the repo-identity ratification; R-claims that propose identity / relationship edits target this.
+
+# Future targets admit via ADR ratification when foundation docs are admitted
+# (per the convergence-readiness gate in the Spore intake protocol).
