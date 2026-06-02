@@ -1,0 +1,385 @@
+{
+  "@context": {
+    "@vocab": "https://w3id.org/koi/bioregional-mapping#",
+    "schema": "https://schema.org/",
+    "skos": "http://www.w3.org/2004/02/skos/core#",
+    "prov": "http://www.w3.org/ns/prov#",
+    "name": "schema:name",
+    "description": "schema:description",
+    "statement": "schema:text",
+    "title": "schema:name",
+    "disposition": "schema:creativeWorkStatus",
+    "claimType": "schema:additionalType",
+    "anchor": "schema:citation",
+    "sourceTitle": "prov:wasDerivedFrom",
+    "attributedTo": {
+      "@id": "prov:wasAttributedTo",
+      "@type": "@id"
+    },
+    "about": {
+      "@id": "schema:about",
+      "@type": "@id"
+    },
+    "isPartOf": {
+      "@id": "schema:isPartOf",
+      "@type": "@id"
+    },
+    "hasClaim": {
+      "@id": "schema:hasPart",
+      "@type": "@id"
+    }
+  },
+  "@id": "bioregional-mapping.graph.canonical-subgraph",
+  "@type": "schema:Dataset",
+  "name": "bioregional-mapping — canonical knowledge subgraph",
+  "description": "Generated JSON-LD projection of this repo's curated canon: bridge-note claims (from the personal-koi backend) linked to concepts (frozen-vocabulary) and their source connections. Hybrid model; see ADR-0003. Do not hand-edit.",
+  "prov:wasGeneratedBy": "scripts/export_subgraph.py",
+  "generatedAt": "2026-06-02T04:42:08Z",
+  "counts": {
+    "concepts": 27,
+    "connections": 2,
+    "claims": 6
+  },
+  "@graph": [
+    {
+      "@id": "bioregional-mapping.concept.bioregion",
+      "@type": "skos:Concept",
+      "name": "bioregion",
+      "description": "Place-attached coordination scope (Salish Sea, Cascadia, Sierra Nevada de Santa Marta, etc.). Load-bearing per spore.positioning.agentic-bioregionalism."
+    },
+    {
+      "@id": "bioregional-mapping.concept.ceremony",
+      "@type": "skos:Concept",
+      "name": "ceremony",
+      "description": "Practice form at cultural layer that gates certain forms of knowledge transmission and witnessing."
+    },
+    {
+      "@id": "bioregional-mapping.concept.commitment",
+      "@type": "skos:Concept",
+      "name": "commitment",
+      "description": "Spore primitive (basic, non-joint form). Mapping outputs surface commitments at the economic layer; flow into BKC's CommitmentPool patterns."
+    },
+    {
+      "@id": "bioregional-mapping.concept.consent",
+      "@type": "skos:Concept",
+      "name": "consent",
+      "description": "Free, prior, informed consent (FPIC); load-bearing at cultural layer for Indigenous-knowledge intake."
+    },
+    {
+      "@id": "bioregional-mapping.concept.documentation",
+      "@type": "skos:Concept",
+      "name": "documentation",
+      "description": "Workshop artifact capture (photos, flipcharts, evaluation forms, narrative pieces); raw material for Story of Place and downstream regeneration strategies."
+    },
+    {
+      "@id": "bioregional-mapping.concept.evidence",
+      "@type": "skos:Concept",
+      "name": "evidence",
+      "description": "Spore verb — claim-supporting artifact. Mapping outputs become evidence for downstream claims (entity resolution, commitments, regeneration strategy)."
+    },
+    {
+      "@id": "bioregional-mapping.concept.facilitation",
+      "@type": "skos:Concept",
+      "name": "facilitation",
+      "description": "Workshop convening labor; care + maintenance + translation labour at the workshop layer (per spore.maintenance-economics)."
+    },
+    {
+      "@id": "bioregional-mapping.concept.field",
+      "@type": "skos:Concept",
+      "name": "field",
+      "description": "Spore primitive — coordination substrate with rule-stack (operational/collective-choice/constitutional layers per spore:ADR-0046). Story of Place is a Field manifestation."
+    },
+    {
+      "@id": "bioregional-mapping.concept.field-guide",
+      "@type": "skos:Concept",
+      "name": "field-guide",
+      "description": "A training-the-trainers manual (e.g., RC Bioregional Mapping Field Guide) that transmits methodology across cohorts; reproduction-continuity artifact."
+    },
+    {
+      "@id": "bioregional-mapping.concept.holon",
+      "@type": "skos:Concept",
+      "name": "holon",
+      "description": "Spore primitive — irreducible coordination unit. Bioregional holons nest (sub-watershed → watershed → ecoregion)."
+    },
+    {
+      "@id": "bioregional-mapping.concept.indigenous-led-governance",
+      "@type": "skos:Concept",
+      "name": "indigenous-led-governance",
+      "description": "Governance by Indigenous nations and protocols, prior to and across colonial jurisdictions. Per BioKulture engineering frame."
+    },
+    {
+      "@id": "bioregional-mapping.concept.intent",
+      "@type": "skos:Concept",
+      "name": "intent",
+      "description": "Spore primitive — directional motivation surfacing in commitments."
+    },
+    {
+      "@id": "bioregional-mapping.concept.joint-commitment",
+      "@type": "skos:Concept",
+      "name": "joint-commitment",
+      "description": "Spore primitive — multi-party-simultaneous commitment (spore:ADR-0050). Workshop-as-Joint-Commitment is paradigm-case."
+    },
+    {
+      "@id": "bioregional-mapping.concept.layer",
+      "@type": "skos:Concept",
+      "name": "layer",
+      "description": "A mapping-practice layer (relational, cultural, ecological, economic, governance, geospatial); one of six headings in the multi-layer rubric."
+    },
+    {
+      "@id": "bioregional-mapping.concept.membrane",
+      "@type": "skos:Concept",
+      "name": "membrane",
+      "description": "Spore primitive — permeable boundary with self-produced or text-authoritative production-mode (spore:ADR-0062, ADR-0053). Mapping layers as membranes."
+    },
+    {
+      "@id": "bioregional-mapping.concept.practitioner",
+      "@type": "skos:Concept",
+      "name": "practitioner",
+      "description": "A person doing bioregional mapping work in the field (Cultivator, Steward, facilitator, Indigenous knowledge holder, GIS analyst, etc.)."
+    },
+    {
+      "@id": "bioregional-mapping.concept.reproduction",
+      "@type": "skos:Concept",
+      "name": "reproduction",
+      "description": "Spore primitive — continuity mechanism (spore:ADR-0049). Field Guide as Reproduction artifact."
+    },
+    {
+      "@id": "bioregional-mapping.concept.rights-of-nature",
+      "@type": "skos:Concept",
+      "name": "rights-of-nature",
+      "description": "Governance-layer doctrine; ecosystems as legal persons (per Speak-for-the-Trees and adjacent practitioner work)."
+    },
+    {
+      "@id": "bioregional-mapping.concept.signal",
+      "@type": "skos:Concept",
+      "name": "signal",
+      "description": "Spore primitive — perception input across a membrane."
+    },
+    {
+      "@id": "bioregional-mapping.concept.sovereign-territory",
+      "@type": "skos:Concept",
+      "name": "sovereign-territory",
+      "description": "Indigenous-governed territory; cultural-layer artifact subject to FPIC and Indigenous-led data governance."
+    },
+    {
+      "@id": "bioregional-mapping.concept.stewardship",
+      "@type": "skos:Concept",
+      "name": "stewardship",
+      "description": "Long-horizon care relationship to a place; load-bearing for generational-time mapping work and intergenerational-handoff machinery."
+    },
+    {
+      "@id": "bioregional-mapping.concept.story-of-place",
+      "@type": "skos:Concept",
+      "name": "story-of-place",
+      "description": "The persistent narrative + artifact set generated by a bioregional mapping process; per RC Phase 2 §1, the central output and Field manifestation."
+    },
+    {
+      "@id": "bioregional-mapping.concept.tooling-map",
+      "@type": "skos:Concept",
+      "name": "tooling-map",
+      "description": "An index of mapping tools and their layer-coverage (QGIS, Felt, regenatlas, Kumu, Restor, etc.); bridge-note artifact form for the external tooling ecosystem."
+    },
+    {
+      "@id": "bioregional-mapping.concept.traditional-ecological-knowledge",
+      "@type": "skos:Concept",
+      "name": "traditional-ecological-knowledge",
+      "description": "TEK; load-bearing knowledge body at cultural + ecological layer intersections; transmitted through generational practice."
+    },
+    {
+      "@id": "bioregional-mapping.concept.warm-data",
+      "@type": "skos:Concept",
+      "name": "warm-data",
+      "description": "Relational / stakeholder data (trust networks, attendance histories, who-knows-whom); the relational layer's primary content type."
+    },
+    {
+      "@id": "bioregional-mapping.concept.watershed",
+      "@type": "skos:Concept",
+      "name": "watershed",
+      "description": "Hydrological holon at sub-watershed → watershed → coastal-zone → ecoregion scales; ecological-layer geographic primitive."
+    },
+    {
+      "@id": "bioregional-mapping.concept.workshop",
+      "@type": "skos:Concept",
+      "name": "workshop",
+      "description": "A bioregional mapping workshop — multi-stakeholder convening that operationalizes mapping practice; instance of joint-commitment."
+    },
+    {
+      "@id": "bioregional-mapping.connection.biohubs-regional-resilience-mapping",
+      "@type": "Connection",
+      "title": "BioHubs: A Pathway to Regional Resilience → bioregional-mapping",
+      "disposition": "clarify existing term",
+      "about": [
+        "bioregional-mapping.concept.layer",
+        "bioregional-mapping.concept.story-of-place",
+        "bioregional-mapping.concept.bioregion",
+        "bioregional-mapping.concept.watershed",
+        "bioregional-mapping.concept.stewardship",
+        "bioregional-mapping.concept.practitioner",
+        "bioregional-mapping.concept.field",
+        "bioregional-mapping.concept.tooling-map"
+      ],
+      "sourceTitle": [
+        "BioHubs: A Pathway to Regional Resilience"
+      ],
+      "hasClaim": [
+        "orn:koi-net.claim:cc0ed748c34c660b85d34ac594e72724",
+        "orn:koi-net.claim:0896e2ea69c486674e8e570e8726493b",
+        "orn:koi-net.claim:81d0e1f27d5b234298aa0919a5eabb2b",
+        "orn:koi-net.claim:3ee9f3259837e9debd788c861b46285a",
+        "orn:koi-net.claim:ae07d3cf008bd6e6cdebf92843c2db8e",
+        "orn:koi-net.claim:fc64e7bdfc98d5086462385100077b3c"
+      ]
+    },
+    {
+      "@id": "orn:koi-net.claim:cc0ed748c34c660b85d34ac594e72724",
+      "@type": "Claim",
+      "identifier": "C1",
+      "statement": "*The repository of 152 initiatives across 44 countries is an explicitly partial, English-skewed snapshot (Europe/North America over-represented; coastal/aquatic hubs notably absent), surfaced through three filtering criteria.* This is a `tooling-map`-adjacent artifact: an indexed field survey with documented coverage gaps. The methodological honesty about skew is itself a precedent for how this repo should caveat its own mapping outputs.",
+      "schema:confidence": "high",
+      "anchor": "§Project Repository: At a Glance · orn:biohubs.whitepaper:repository",
+      "claimType": "governance",
+      "attributedTo": "org:bioregional-mapping-learning-field",
+      "about": [
+        "bioregional-mapping.concept.layer",
+        "bioregional-mapping.concept.story-of-place",
+        "bioregional-mapping.concept.bioregion",
+        "bioregional-mapping.concept.watershed",
+        "bioregional-mapping.concept.stewardship",
+        "bioregional-mapping.concept.practitioner",
+        "bioregional-mapping.concept.field",
+        "bioregional-mapping.concept.tooling-map"
+      ],
+      "isPartOf": "bioregional-mapping.connection.biohubs-regional-resilience-mapping"
+    },
+    {
+      "@id": "orn:koi-net.claim:0896e2ea69c486674e8e570e8726493b",
+      "@type": "Claim",
+      "identifier": "C2",
+      "statement": "*Site footprint and area of influence are distinct mapping quantities: across 59 sized projects the median site is ~44 ha (mean 285 ha), and 12 hubs that record a stewardship/influence area report it averaging 21× (up to 150×+) the owned site — e.g. Sinal do Vale operates a 173-ha site across a 200,000-ha watershed.* The site-vs-reach gap is a load-bearing mapping distinction at the `watershed`/`bioregion` scale: the polygon a hub owns is not the polygon it stewards.",
+      "schema:confidence": "high",
+      "anchor": "§Sites & Their Reach",
+      "claimType": "governance",
+      "attributedTo": "org:bioregional-mapping-learning-field",
+      "about": [
+        "bioregional-mapping.concept.layer",
+        "bioregional-mapping.concept.story-of-place",
+        "bioregional-mapping.concept.bioregion",
+        "bioregional-mapping.concept.watershed",
+        "bioregional-mapping.concept.stewardship",
+        "bioregional-mapping.concept.practitioner",
+        "bioregional-mapping.concept.field",
+        "bioregional-mapping.concept.tooling-map"
+      ],
+      "isPartOf": "bioregional-mapping.connection.biohubs-regional-resilience-mapping"
+    },
+    {
+      "@id": "orn:koi-net.claim:81d0e1f27d5b234298aa0919a5eabb2b",
+      "@type": "Claim",
+      "identifier": "C3",
+      "statement": "*The seven \"ingredients\" (Land & Ecology; Food & Material Flows; Knowledge & Learning; Culture & Social Fabric; Governance & Stewardship; Finance & Enterprise; Human Health & Inner Development) compose a multi-domain reading of a place.* This is a near-parallel to this repo's six-layer rubric (relational/cultural/ecological/economic/governance/geospatial) — an external corroboration that mapping a hub/region means holding multiple domains as distinct `layer`s rather than a single map.",
+      "schema:confidence": "high",
+      "anchor": "§BioHub Design Framework · §Ingredients",
+      "claimType": "governance",
+      "attributedTo": "org:bioregional-mapping-learning-field",
+      "about": [
+        "bioregional-mapping.concept.layer",
+        "bioregional-mapping.concept.story-of-place",
+        "bioregional-mapping.concept.bioregion",
+        "bioregional-mapping.concept.watershed",
+        "bioregional-mapping.concept.stewardship",
+        "bioregional-mapping.concept.practitioner",
+        "bioregional-mapping.concept.field",
+        "bioregional-mapping.concept.tooling-map"
+      ],
+      "isPartOf": "bioregional-mapping.connection.biohubs-regional-resilience-mapping"
+    },
+    {
+      "@id": "orn:koi-net.claim:3ee9f3259837e9debd788c861b46285a",
+      "@type": "Claim",
+      "identifier": "C4",
+      "statement": "*The Regenesis Group's \"Story of Place\" — reading a place as the sum of its ecological, cultural, and economic energies, uncovering its \"vocation\" before intervening — is presented as the foundational pre-mapping assessment.* This directly affirms `story-of-place` as both method and artifact in this repo: deep regional assessment precedes and grounds any focal intervention.",
+      "schema:confidence": "high",
+      "anchor": "§Finding Your Focal Point",
+      "claimType": "governance",
+      "attributedTo": "org:bioregional-mapping-learning-field",
+      "about": [
+        "bioregional-mapping.concept.layer",
+        "bioregional-mapping.concept.story-of-place",
+        "bioregional-mapping.concept.bioregion",
+        "bioregional-mapping.concept.watershed",
+        "bioregional-mapping.concept.stewardship",
+        "bioregional-mapping.concept.practitioner",
+        "bioregional-mapping.concept.field",
+        "bioregional-mapping.concept.tooling-map"
+      ],
+      "isPartOf": "bioregional-mapping.connection.biohubs-regional-resilience-mapping"
+    },
+    {
+      "@id": "orn:koi-net.claim:ae07d3cf008bd6e6cdebf92843c2db8e",
+      "@type": "Claim",
+      "identifier": "C5",
+      "statement": "*A recurring success pattern is long-horizon `stewardship` and deep rootedness in place — a ~five-year threshold (echoed by Bill Reed of Regenesis) before results become visible enough to attract consistent support.* For mapping `practitioner`s this sets a realistic time-base: mapping is the start of a multi-year stewardship rhythm, not a one-time deliverable — consistent with this repo's framing of mapping as ongoing `field` practice.",
+      "schema:confidence": "medium",
+      "anchor": "§Recurring Patterns of Success",
+      "claimType": "governance",
+      "attributedTo": "org:bioregional-mapping-learning-field",
+      "about": [
+        "bioregional-mapping.concept.layer",
+        "bioregional-mapping.concept.story-of-place",
+        "bioregional-mapping.concept.bioregion",
+        "bioregional-mapping.concept.watershed",
+        "bioregional-mapping.concept.stewardship",
+        "bioregional-mapping.concept.practitioner",
+        "bioregional-mapping.concept.field",
+        "bioregional-mapping.concept.tooling-map"
+      ],
+      "isPartOf": "bioregional-mapping.connection.biohubs-regional-resilience-mapping"
+    },
+    {
+      "@id": "orn:koi-net.claim:fc64e7bdfc98d5086462385100077b3c",
+      "@type": "Claim",
+      "identifier": "C6",
+      "statement": "*Under a proximity classification, 47% of hubs are peri-urban, 41% rural/remote, 12% urban — challenging the field's default rural orientation.* A geospatial-`layer` finding worth carrying into this repo's site-classification scheme: proximity/commute-access is a distinct axis from population density or land character.",
+      "schema:confidence": "medium",
+      "anchor": "§The Peri-Urban Sweet Spot",
+      "claimType": "governance",
+      "attributedTo": "org:bioregional-mapping-learning-field",
+      "about": [
+        "bioregional-mapping.concept.layer",
+        "bioregional-mapping.concept.story-of-place",
+        "bioregional-mapping.concept.bioregion",
+        "bioregional-mapping.concept.watershed",
+        "bioregional-mapping.concept.stewardship",
+        "bioregional-mapping.concept.practitioner",
+        "bioregional-mapping.concept.field",
+        "bioregional-mapping.concept.tooling-map"
+      ],
+      "isPartOf": "bioregional-mapping.connection.biohubs-regional-resilience-mapping"
+    },
+    {
+      "@id": "bioregional-mapping.connection.rc-phase-2-program-guide",
+      "@type": "Connection",
+      "title": "RC LHC Phase 2 Program Guide → bioregional-mapping canon",
+      "disposition": "clarify existing term",
+      "about": [
+        "bioregional-mapping.concept.layer",
+        "bioregional-mapping.concept.story-of-place",
+        "bioregional-mapping.concept.workshop",
+        "bioregional-mapping.concept.field-guide",
+        "bioregional-mapping.concept.facilitation",
+        "bioregional-mapping.concept.documentation",
+        "bioregional-mapping.concept.bioregion",
+        "bioregional-mapping.concept.stewardship",
+        "bioregional-mapping.concept.consent",
+        "bioregional-mapping.concept.reproduction",
+        "bioregional-mapping.concept.joint-commitment",
+        "bioregional-mapping.concept.field",
+        "bioregional-mapping.concept.practitioner"
+      ],
+      "sourceTitle": [
+        "Regenerate Cascadia — Landscape Hub Cultivator Phase 2 Program Guide (Bioregional Mapping and Workshop Preparation, April – July 2026)"
+      ],
+      "hasClaim": []
+    }
+  ]
+}
